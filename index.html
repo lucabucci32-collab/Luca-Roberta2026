@@ -11,98 +11,84 @@
             margin: 0;
             padding: 0;
             font-family: 'Playfair Display', serif;
-            /* Sfondo floreale che si ripete per coprire tutto lo schermo */
-            background: url('https://png.pngtree.com/background/20250306/original/pngtree-watercolor-floral-frame-with-gold-accents-for-wedding-invitation-background-picture-image_16294205.jpg');
-            background-size: cover;
+            /* Nuova strategia: sfondo che si ripete e copre tutto */
+            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png'), 
+                              url('https://png.pngtree.com/background/20250306/original/pngtree-watercolor-floral-frame-with-gold-accents-for-wedding-invitation-background-picture-image_16294205.jpg');
+            background-size: auto, cover;
             background-position: center;
             background-attachment: fixed;
-            color: #4a5568;
             text-align: center;
             min-height: 100vh;
-            padding: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .container {
-            /* Sfondo bianco molto trasparente per far vedere i fiori sotto */
-            background: rgba(255, 255, 255, 0.88); 
-            backdrop-filter: blur(3px); /* Effetto vetro satinato */
-            padding: 50px 30px;
+            /* Rendiamo il contenitore molto più trasparente (0.7) */
+            background: rgba(255, 255, 255, 0.75); 
+            /* L'effetto sfocatura aiuta a leggere il testo sopra i fiori */
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            
+            padding: 40px 25px;
             border-radius: 20px;
             max-width: 85%;
-            width: 550px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            width: 500px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             border: 1.5px solid #d4af37;
-            margin: 0 auto;
+            margin: 20px auto;
         }
 
-        h1 {
-            font-size: clamp(40px, 10vw, 65px);
-            color: #5d8aa8;
-            margin-bottom: 5px;
-            font-family: 'Great Vibes', cursive;
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #b0c4de;
-            margin-top: 0;
-            margin-bottom: 25px;
-            font-weight: normal;
-            letter-spacing: 2px;
-        }
-
+        h1 { font-size: 50px; color: #5d8aa8; font-family: 'Great Vibes', cursive; margin: 0; }
+        h2 { font-size: 20px; color: #b0c4de; margin-bottom: 20px; font-weight: normal; letter-spacing: 2px; }
+        
         .quote {
-            font-size: 19px;
+            font-size: 18px;
             color: #4a5568;
-            margin: 25px 0;
+            margin: 20px 0;
             padding: 15px;
-            border-top: 1px solid #d4af37;
-            border-bottom: 1px solid #d4af37;
+            border-top: 1px solid rgba(212, 175, 55, 0.5);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.5);
         }
 
         .details {
-            font-size: 17px;
-            margin: 25px 0;
-            padding: 20px;
-            background: rgba(93, 138, 168, 0.05);
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 15px;
             border-radius: 15px;
+            margin-bottom: 20px;
         }
 
-        .map-box { margin: 15px 0; }
-        
         iframe {
             width: 100%;
-            height: 230px;
+            height: 200px;
             border-radius: 10px;
             border: 1px solid #d4af37;
+            margin-top: 10px;
         }
 
         .rsvp-btn {
             display: inline-block;
             background-color: #5d8aa8;
             color: white !important;
-            padding: 16px 30px;
+            padding: 15px 25px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 17px;
-            margin: 20px 0;
-            box-shadow: 0 4px 15px rgba(93, 138, 168, 0.3);
+            margin: 15px 0;
         }
 
-        .contacts { font-size: 15px; margin-top: 15px; }
+        .contacts { font-size: 14px; color: #4a5568; }
         .contacts a { color: #5d8aa8; text-decoration: none; font-weight: bold; }
 
         @media (max-width: 600px) {
             body { 
-                /* Su mobile lo sfondo scorre per non pesare sulla memoria */
-                background-attachment: scroll; 
-                padding: 15px 0;
+                background-attachment: scroll;
+                background-size: auto 100%; /* Forza la visibilità dell'altezza dell'immagine */
             }
-            .container { 
-                padding: 35px 15px; 
-                max-width: 90%; 
-            }
+            .container { padding: 30px 15px; }
+            h1 { font-size: 42px; }
         }
     </style>
 </head>
@@ -116,45 +102,26 @@
         Siamo felici di condividere con voi<br>il giorno del nostro matrimonio.
     </div>
 
-    <p>Vi aspettiamo per festeggiare insieme.</p>
-
     <div class="details">
         <p><strong>Cerimonia • ore 11:30</strong><br>
-        Comune di Cesena - Sala degli Specchi<br>
-        Piazza del Popolo 10, Cesena (FC)</p>
-        
-        <div class="map-box">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2864.551624446559!2d12.2410842!3d44.137889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca514787964a3%3A0xc34857b274211f42!2sPiazza%20del%20Popolo%2C%2010%2C%2047521%20Cesena%20FC!5e0!3m2!1sit!2sit!4v1700000000000" 
-                allowfullscreen="" loading="lazy"></iframe>
-        </div>
+        Comune di Cesena - Sala degli Specchi</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2863.38555890887!2d12.298131376646808!3d44.10651832300486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca61994e63f97%3A0x7d6b8b0e77d6f51c!2sVia%20Castello%20Montenovo%2C%2074%2C%2047020%20Montiano%20FC!5e0!3m2!1sit!2sit!4v17000000000013" allowfullscreen="" loading="lazy"></iframe>
 
-        <hr style="border:0; height:1px; background:#d4af37; opacity:0.3; margin:20px 0;">
+        <hr style="border:0; height:1px; background:#d4af37; opacity:0.2; margin:20px 0;">
 
         <p><strong>Ricevimento</strong><br>
-        Ristorante Castello di Montenovo<br>
-        Via Castello Montenovo 74, Montiano (FC)</p>
-
-        <div class="map-box">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2866.562181512349!2d12.29959637666245!3d44.07185077108479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca40f15bb478d%3A0x70812402d0bad14a!2sRistorante%20Castello!5e0!3m2!1sit!2sit!4v1715783452481!5m2!1sit!2sit" 
-                allowfullscreen="" loading="lazy"></iframe>
-        </div>
+        Ristorante Castello di Montenovo</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2863.38555890887!2d12.298131376646808!3d44.10651832300486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca61994e63f97%3A0x7d6b8b0e77d6f51c!2sVia%20Castello%20Montenovo%2C%2074%2C%2047020%20Montiano%20FC!5e0!3m2!1sit!2sit!4v17000000000014" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <div class="rsvp-section">
-        <p>È gradita conferma entro il <strong>30 Aprile 2026</strong></p>
-        <a href="https://forms.gle/Pp6n5yio7U24QreX7" class="rsvp-btn" target="_blank">CONFERMA LA TUA PRESENZA</a>
-        
+        <p>Gentile conferma entro il 30 Aprile</p>
+        <a href="https://forms.gle/ZqubB3qhQULJkoHT7" class="rsvp-btn" target="_blank">CONFERMA QUI</a>
         <div class="contacts">
             <p>Luca: <a href="https://wa.me/393407375613">340 737 5613</a><br>
             Roberta: <a href="https://wa.me/393282893816">328 289 3816</a></p>
         </div>
     </div>
-
-    <p style="margin-top: 40px; font-style: italic; color: #5d8aa8;">
-        Vi aspettiamo! 💙✨
-    </p>
 </div>
 
 </body>

@@ -11,9 +11,10 @@
             margin: 0;
             padding: 0;
             font-family: 'Playfair Display', serif;
-            background-color: #f4f7f9;
-            /* Nuova immagine: Fiori azzurri delicati sparsi */
-            background-image: url('https://img.freepik.com/free-vector/hand-painted-watercolor-floral-background_23-2148413926.jpg');
+            /* COLORE DI BASE: Un azzurro polvere elegante */
+            background-color: #d6e4f0; 
+            /* SFONDO: Pattern floreale azzurro acquerello */
+            background-image: url('https://img.freepik.com/free-vector/hand-painted-watercolor-floral-background_23-2148404130.jpg?t=st=1715694300&w=1380');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -26,33 +27,31 @@
         }
 
         .container {
-            /* Molto trasparente per far vedere i fiori azzurri sotto */
-            background: rgba(255, 255, 255, 0.82); 
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
+            /* Bianco leggero per far trasparire l'azzurro dello sfondo */
+            background: rgba(255, 255, 255, 0.85); 
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             padding: 45px 25px;
             border-radius: 30px;
             max-width: 85%;
             width: 480px;
-            box-shadow: 0 15px 40px rgba(74, 110, 138, 0.15);
+            box-shadow: 0 15px 40px rgba(74, 110, 138, 0.2);
             border: 1.5px solid #d4af37;
             margin: auto;
         }
 
         h1 { 
             font-size: clamp(45px, 10vw, 65px); 
-            color: #3d5a80; 
+            color: #3d5a80; /* Blu balena più intenso */
             font-family: 'Great Vibes', cursive; 
             margin: 0;
         }
 
-        /* DATA: Colore intensificato per leggibilità */
         h2 { 
             font-size: 28px; 
-            color: #1a3a5a; 
+            color: #293241; /* Blu quasi nero per la data */
             margin-top: 5px;
             font-weight: 700;
-            letter-spacing: 1px;
         }
         
         .quote {
@@ -72,16 +71,6 @@
             border: 1px solid #d4af37;
             margin: 20px 0;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
-        .map-label {
-            font-weight: bold;
-            color: #3d5a80;
-            display: block;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            font-size: 12px;
-            letter-spacing: 1.5px;
         }
 
         iframe {
@@ -123,24 +112,20 @@
     </div>
 
     <div class="map-wrapper">
-        <span class="map-label">Cerimonia • ore 11:30</span>
-        <p style="font-size: 15px;">Comune di Cesena - Sala degli Specchi<br>Piazza del Popolo 10, Cesena</p>
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2861.439396342828!2d12.240742176840428!3d44.13606792033621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca4d88258e727%3A0xc6657805165f426!2sPiazza%20del%20Popolo%2C%2010%2C%2047521%20Cesena%20FC!5e0!3m2!1sit!2sit!4v1715695000000!5m2!1sit!2sit" 
-            allowfullscreen="" loading="lazy"></iframe>
+        <p style="font-weight: bold; color: #3d5a80; margin-bottom: 10px;">Cerimonia • ore 11:30</p>
+        <p style="font-size: 14px;">Comune di Cesena - Sala degli Specchi<br>Piazza del Popolo 10, Cesena</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2864.135682855217!2d12.304415376660995!3d44.1068417710852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca309079a4079%3A0x280e2272e512419d!2sRistorante%20Castello%20di%20Montenovo!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit5" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <div class="map-wrapper">
-        <span class="map-label">Ricevimento</span>
-        <p style="font-size: 15px;">Ristorante Castello di Montenovo<br>Via Castello Montenovo 74, Montiano</p>
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2862.3323041935824!2d12.298175476839356!3d44.11894982153839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca40f15bb478d%3A0xf0812402d0ba614a!2sRistorante%20Castello!5e0!3m2!1sit!2sit!4v1715695100000!5m2!1sit!2sit" 
-            allowfullscreen="" loading="lazy"></iframe>
+        <p style="font-weight: bold; color: #3d5a80; margin-bottom: 10px;">Ricevimento</p>
+        <p style="font-size: 14px;">Ristorante Castello di Montenovo<br>Via Castello Montenovo 74, Montiano</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2864.135682855217!2d12.304415376660995!3d44.1068417710852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca309079a4079%3A0x280e2272e512419d!2sRistorante%20Castello%20di%20Montenovo!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit6" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <div class="rsvp-section">
-        <p>Gentile conferma entro il 30 Aprile 2026</p>
-        <a href="https://forms.gle/ssEcmfgYVf5TbZDr5" class="rsvp-btn" target="_blank">CONFERMA LA TUA PRESENZA</a>
+        <p>È gradita conferma entro il 30 Aprile 2026</p>
+        <a href="https://forms.gle/L8eUJJfSa4SVc7WE9" class="rsvp-btn" target="_blank">CONFERMA LA TUA PRESENZA</a>
         <div class="contacts">
             <p>Luca: <a href="https://wa.me/393407375613">340 737 5613</a><br>
             Roberta: <a href="https://wa.me/393282893816">328 289 3816</a></p>

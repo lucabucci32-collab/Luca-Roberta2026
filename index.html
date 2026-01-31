@@ -11,8 +11,8 @@
             margin: 0;
             padding: 0;
             font-family: 'Playfair Display', serif;
-            /* Usa il file che hai caricato */
-            background: url('sfondo.jpg') no-repeat center center fixed;
+            /* Sfondo floreale professionale (se non carichi il tuo file, questo è molto simile) */
+            background: url('https://img.freepik.com/free-vector/hand-painted-watercolor-floral-background_23-2148438102.jpg') no-repeat center center fixed;
             background-size: cover;
             text-align: center;
             min-height: 100vh;
@@ -23,14 +23,16 @@
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.88); /* Trasparenza per far vedere i fiori */
-            backdrop-filter: blur(5px);
+            /* BIANCO ALLEGGERITO: Opacità abbassata a 0.75 per far vedere i fiori sotto */
+            background: rgba(255, 255, 255, 0.75); 
+            backdrop-filter: blur(10px); /* Aumentato l'effetto vetro per eleganza */
+            -webkit-backdrop-filter: blur(10px);
             padding: 40px 25px;
-            border-radius: 25px;
+            border-radius: 30px;
             max-width: 85%;
             width: 480px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            border: 2px solid #d4af37;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 1.5px solid #d4af37;
             margin: auto;
         }
 
@@ -42,8 +44,8 @@
         }
 
         h2 { 
-            font-size: 26px; 
-            color: #1a3a5a; /* Blu scuro leggibile */
+            font-size: 28px; 
+            color: #1a3a5a; /* Blu scurissimo per massima leggibilità */
             margin-top: 0;
             font-weight: 700;
         }
@@ -52,14 +54,10 @@
             font-size: 18px;
             margin: 20px 0;
             padding: 15px;
-            border-top: 1px solid #d4af37;
-            border-bottom: 1px solid #d4af37;
+            border-top: 1px solid rgba(212, 175, 55, 0.5);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.5);
             font-style: italic;
-        }
-
-        .details {
-            font-size: 16px;
-            text-align: center;
+            color: #2d3748;
         }
 
         .map-title {
@@ -68,30 +66,32 @@
             display: block;
             margin-top: 15px;
             text-transform: uppercase;
-            font-size: 14px;
+            font-size: 13px;
+            letter-spacing: 1px;
         }
 
         iframe {
             width: 100%;
-            height: 200px;
-            border-radius: 12px;
+            height: 220px;
+            border-radius: 15px;
             border: 1px solid #d4af37;
-            margin-top: 8px;
+            margin-top: 10px;
         }
 
         .rsvp-btn {
             display: inline-block;
             background-color: #4a6e8a;
             color: white !important;
-            padding: 15px 30px;
+            padding: 16px 32px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
+            font-size: 17px;
             margin: 25px 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(74, 110, 138, 0.3);
         }
 
-        .contacts { font-size: 14px; line-height: 1.6; }
+        .contacts { font-size: 14px; line-height: 1.6; color: #2d3748; }
         .contacts a { color: #4a6e8a; text-decoration: none; font-weight: bold; }
 
         @media (max-width: 600px) {
@@ -113,18 +113,18 @@
     <div class="details">
         <span class="map-title">Cerimonia • ore 11:30</span>
         <p>Comune di Cesena - Sala degli Specchi<br>Piazza del Popolo 10, Cesena</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d2862.646540306145!2d12.240751376664983!3d44.13795552125292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca4c602a806c9%3A0x6a059d0429f6f600!2sPalazzo%20Albornoz%20-%20Residenza%20Municipale!5e0!3m2!1sit!2sit!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2861.947231454652!2d12.240417676643916!3d44.13601442100806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca4d8a2455243%3A0xc6a8f6064121544a!2sPiazza%20del%20Popolo%2C%2010%2C%2047521%20Cesena%20FC!5e0!3m2!1sit!2sit!4v1715699000000!5m2!1sit!2sit" allowfullscreen="" loading="lazy"></iframe>
 
-        <hr style="border:0; height:1px; background:#d4af37; opacity:0.3; margin:25px 0;">
+        <hr style="border:0; height:1px; background:#d4af37; opacity:0.3; margin:30px 0;">
 
         <span class="map-title">Ricevimento</span>
         <p>Ristorante Castello di Montenovo<br>Via Castello Montenovo 74, Montiano</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d2864.0722383204913!2d12.302568076663523!3d44.10850232317546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca40f15bb478d%3A0x70812402d0ba614a!2sRistorante%20Castello!5e0!3m2!1sit!2sit!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2863.024467554832!2d12.298284676642735!3d44.11388042245842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca40f15bb478d%3A0xf0812402d0ba614a!2sRistorante%20Castello!5e0!3m2!1sit!2sit!4v1715699100000!5m2!1sit!2sit" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <div class="rsvp-section">
         <p>Gentile conferma entro il 30 Aprile 2026</p>
-        <a href="https://forms.gle/e5G5QkkJXSuRoXPr9" class="rsvp-btn" target="_blank">CONFERMA LA TUA PRESENZA</a>
+        <a href="https://forms.gle/ot7UiMe9ewJ7W9GX6" class="rsvp-btn" target="_blank">CONFERMA LA TUA PRESENZA</a>
         
         <div class="contacts">
             <p>Luca: <a href="https://wa.me/393407375613">340 737 5613</a><br>

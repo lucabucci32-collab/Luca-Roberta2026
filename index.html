@@ -11,11 +11,12 @@
             margin: 0;
             padding: 0;
             font-family: 'Playfair Display', serif;
-            /* COLORE DI BASE: Un azzurro polvere elegante */
-            background-color: #d6e4f0; 
-            /* SFONDO: Pattern floreale azzurro acquerello */
-            background-image: url('https://img.freepik.com/free-vector/hand-painted-watercolor-floral-background_23-2148404130.jpg?t=st=1715694300&w=1380');
-            background-size: cover;
+            /* COLORE DI RISERVA: Se l'immagine non carica, lo sfondo sarà azzurro polvere */
+            background-color: #e3edf7; 
+            /* SFONDO FLOREALE: Link aggiornato e più stabile */
+            background-image: url('https://www.transparenttextures.com/patterns/clean-gray-paper.png'), 
+                              url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=2000&auto=format&fit=crop');
+            background-size: auto, cover;
             background-position: center;
             background-attachment: fixed;
             text-align: center;
@@ -27,77 +28,77 @@
         }
 
         .container {
-            /* Bianco leggero per far trasparire l'azzurro dello sfondo */
-            background: rgba(255, 255, 255, 0.85); 
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 45px 25px;
+            /* Sfondo bianco latte con alta trasparenza */
+            background: rgba(255, 255, 255, 0.82); 
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 40px 20px;
             border-radius: 30px;
-            max-width: 85%;
+            max-width: 88%;
             width: 480px;
-            box-shadow: 0 15px 40px rgba(74, 110, 138, 0.2);
-            border: 1.5px solid #d4af37;
-            margin: auto;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            margin: 20px auto;
         }
 
         h1 { 
-            font-size: clamp(45px, 10vw, 65px); 
-            color: #3d5a80; /* Blu balena più intenso */
+            font-size: clamp(42px, 10vw, 62px); 
+            color: #4a6e8a; 
             font-family: 'Great Vibes', cursive; 
             margin: 0;
         }
 
         h2 { 
-            font-size: 28px; 
-            color: #293241; /* Blu quasi nero per la data */
+            font-size: 26px; 
+            color: #1a3a5a; 
             margin-top: 5px;
             font-weight: 700;
         }
         
         .quote {
-            font-size: 19px;
-            margin: 25px 0;
+            font-size: 18px;
+            margin: 20px 0;
             padding: 15px;
-            border-top: 1px solid rgba(212, 175, 55, 0.5);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.5);
+            border-top: 1px solid #d4af37;
+            border-bottom: 1px solid #d4af37;
             font-style: italic;
-            color: #2d3748;
         }
 
         .map-wrapper {
             background: #ffffff;
             padding: 12px;
             border-radius: 20px;
-            border: 1px solid #d4af37;
+            border: 1px solid #eee;
             margin: 20px 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            /* Questo "stacca" la mappa dallo sfondo floreale */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
         }
 
         iframe {
             width: 100%;
-            height: 220px;
+            height: 200px;
             border-radius: 12px;
             border: none;
         }
 
         .rsvp-btn {
             display: inline-block;
-            background-color: #3d5a80;
+            background-color: #4a6e8a;
             color: white !important;
-            padding: 18px 35px;
+            padding: 16px 30px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 18px;
-            margin: 25px 0;
+            font-size: 17px;
+            margin: 20px 0;
         }
 
-        .contacts { font-size: 15px; color: #2d3748; }
-        .contacts a { color: #3d5a80; text-decoration: none; font-weight: bold; }
+        .contacts { font-size: 14px; line-height: 1.6; }
+        .contacts a { color: #4a6e8a; text-decoration: none; font-weight: bold; }
 
         @media (max-width: 600px) {
             body { background-attachment: scroll; }
-            .container { padding: 35px 15px; width: 90%; }
+            .container { padding: 30px 15px; }
         }
     </style>
 </head>
@@ -112,20 +113,20 @@
     </div>
 
     <div class="map-wrapper">
-        <p style="font-weight: bold; color: #3d5a80; margin-bottom: 10px;">Cerimonia • ore 11:30</p>
+        <p style="font-weight: bold; color: #4a6e8a; margin-top: 0;">Cerimonia • ore 11:30</p>
         <p style="font-size: 14px;">Comune di Cesena - Sala degli Specchi<br>Piazza del Popolo 10, Cesena</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2864.135682855217!2d12.304415376660995!3d44.1068417710852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca309079a4079%3A0x280e2272e512419d!2sRistorante%20Castello%20di%20Montenovo!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit5" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2862.880486001099!2d12.240763376724646!3d44.13735602058316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca4f438a2e46d%3A0xc6e4668f45a7be32!2sPiazza%20del%20Popolo%2C%2010%2C%2047521%20Cesena%20FC!5e0!3m2!1sit!2sit!4v1715698000000!5m2!1sit!2sit" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <div class="map-wrapper">
-        <p style="font-weight: bold; color: #3d5a80; margin-bottom: 10px;">Ricevimento</p>
+        <p style="font-weight: bold; color: #4a6e8a; margin-top: 0;">Ricevimento</p>
         <p style="font-size: 14px;">Ristorante Castello di Montenovo<br>Via Castello Montenovo 74, Montiano</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2864.135682855217!2d12.304415376660995!3d44.1068417710852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca309079a4079%3A0x280e2272e512419d!2sRistorante%20Castello%20di%20Montenovo!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit6" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2863.38550186591!2d12.299443276724128!3d44.12781442126296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca40f15bb478d%3A0xf0812402d0ba614a!2sRistorante%20Castello!5e0!3m2!1sit!2sit!4v1715698100000!5m2!1sit!2sit" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <div class="rsvp-section">
         <p>È gradita conferma entro il 30 Aprile 2026</p>
-        <a href="https://forms.gle/L8eUJJfSa4SVc7WE9" class="rsvp-btn" target="_blank">CONFERMA LA TUA PRESENZA</a>
+        <a href="https://forms.gle/SJHkhyK3dDxH6h7H7" class="rsvp-btn" target="_blank">CONFERMA QUI</a>
         <div class="contacts">
             <p>Luca: <a href="https://wa.me/393407375613">340 737 5613</a><br>
             Roberta: <a href="https://wa.me/393282893816">328 289 3816</a></p>
@@ -134,4 +135,3 @@
 </div>
 
 </body>
-</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roberta & Luca - 14 Giugno 2026</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', serif;
+            /* Sfondo floreale che si ripete per coprire tutto lo schermo */
+            background: url('https://png.pngtree.com/background/20250306/original/pngtree-watercolor-floral-frame-with-gold-accents-for-wedding-invitation-background-picture-image_16294205.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #4a5568;
+            text-align: center;
+            min-height: 100vh;
+            padding: 30px 0;
+        }
+
+        .container {
+            /* Sfondo bianco molto trasparente per far vedere i fiori sotto */
+            background: rgba(255, 255, 255, 0.88); 
+            backdrop-filter: blur(3px); /* Effetto vetro satinato */
+            padding: 50px 30px;
+            border-radius: 20px;
+            max-width: 85%;
+            width: 550px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 1.5px solid #d4af37;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: clamp(40px, 10vw, 65px);
+            color: #5d8aa8;
+            margin-bottom: 5px;
+            font-family: 'Great Vibes', cursive;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #b0c4de;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-weight: normal;
+            letter-spacing: 2px;
+        }
+
+        .quote {
+            font-size: 19px;
+            color: #4a5568;
+            margin: 25px 0;
+            padding: 15px;
+            border-top: 1px solid #d4af37;
+            border-bottom: 1px solid #d4af37;
+        }
+
+        .details {
+            font-size: 17px;
+            margin: 25px 0;
+            padding: 20px;
+            background: rgba(93, 138, 168, 0.05);
+            border-radius: 15px;
+        }
+
+        .map-box { margin: 15px 0; }
+        
+        iframe {
+            width: 100%;
+            height: 230px;
+            border-radius: 10px;
+            border: 1px solid #d4af37;
+        }
+
+        .rsvp-btn {
+            display: inline-block;
+            background-color: #5d8aa8;
+            color: white !important;
+            padding: 16px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 17px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(93, 138, 168, 0.3);
+        }
+
+        .contacts { font-size: 15px; margin-top: 15px; }
+        .contacts a { color: #5d8aa8; text-decoration: none; font-weight: bold; }
+
+        @media (max-width: 600px) {
+            body { 
+                /* Su mobile lo sfondo scorre per non pesare sulla memoria */
+                background-attachment: scroll; 
+                padding: 15px 0;
+            }
+            .container { 
+                padding: 35px 15px; 
+                max-width: 90%; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Roberta & Luca</h1>
+    <h2>14 Giugno 2026</h2>
+
+    <div class="quote">
+        Siamo felici di condividere con voi<br>il giorno del nostro matrimonio.
+    </div>
+
+    <p>Vi aspettiamo per festeggiare insieme.</p>
+
+    <div class="details">
+        <p><strong>Cerimonia • ore 11:30</strong><br>
+        Comune di Cesena - Sala degli Specchi<br>
+        Piazza del Popolo 10, Cesena (FC)</p>
+        
+        <div class="map-box">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2864.551624446559!2d12.2410842!3d44.137889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca514787964a3%3A0xc34857b274211f42!2sPiazza%20del%20Popolo%2C%2010%2C%2047521%20Cesena%20FC!5e0!3m2!1sit!2sit!4v1700000000000" 
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <hr style="border:0; height:1px; background:#d4af37; opacity:0.3; margin:20px 0;">
+
+        <p><strong>Ricevimento</strong><br>
+        Ristorante Castello di Montenovo<br>
+        Via Castello Montenovo 74, Montiano (FC)</p>
+
+        <div class="map-box">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2866.562181512349!2d12.29959637666245!3d44.07185077108479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca40f15bb478d%3A0x70812402d0bad14a!2sRistorante%20Castello!5e0!3m2!1sit!2sit!4v1715783452481!5m2!1sit!2sit" 
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <div class="rsvp-section">
+        <p>È gradita conferma entro il <strong>30 Aprile 2026</strong></p>
+        <a href="https://forms.gle/Pp6n5yio7U24QreX7" class="rsvp-btn" target="_blank">CONFERMA LA TUA PRESENZA</a>
+        
+        <div class="contacts">
+            <p>Luca: <a href="https://wa.me/393407375613">340 737 5613</a><br>
+            Roberta: <a href="https://wa.me/393282893816">328 289 3816</a></p>
+        </div>
+    </div>
+
+    <p style="margin-top: 40px; font-style: italic; color: #5d8aa8;">
+        Vi aspettiamo! 💙✨
+    </p>
+</div>
+
+</body>
+</html>

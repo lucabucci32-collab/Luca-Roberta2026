@@ -11,100 +11,94 @@
             margin: 0;
             padding: 0;
             font-family: 'Playfair Display', serif;
-            background: url('https://img.freepik.com/free-vector/hand-painted-watercolor-floral-background_23-2148438102.jpg') no-repeat center center fixed;
-            background-size: cover;
+            /* COLORE DI RISERVA: Se l'immagine non carica, lo sfondo sarà azzurro polvere */
+            background-color: #e3edf7; 
+            /* SFONDO FLOREALE: Link aggiornato e più stabile */
+            background-image: url('https://www.transparenttextures.com/patterns/clean-gray-paper.png'), 
+                              url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=2000&auto=format&fit=crop');
+            background-size: auto, cover;
+            background-position: center;
+            background-attachment: fixed;
             text-align: center;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 30px 0;
+            padding: 20px 0;
         }
 
         .container {
+            /* Sfondo bianco latte con alta trasparenza */
             background: rgba(255, 255, 255, 0.82); 
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            padding: 45px 25px;
-            border-radius: 35px;
-            max-width: 85%;
-            width: 500px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-            border: 1px solid rgba(212, 175, 55, 0.4);
-            margin: auto;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 40px 20px;
+            border-radius: 30px;
+            max-width: 88%;
+            width: 480px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            margin: 20px auto;
         }
 
         h1 { 
-            font-size: clamp(45px, 10vw, 65px); 
+            font-size: clamp(42px, 10vw, 62px); 
             color: #4a6e8a; 
             font-family: 'Great Vibes', cursive; 
             margin: 0;
         }
 
         h2 { 
-            font-size: 28px; 
+            font-size: 26px; 
             color: #1a3a5a; 
             margin-top: 5px;
             font-weight: 700;
-            letter-spacing: 1px;
         }
         
         .quote {
             font-size: 18px;
-            margin: 25px 0;
+            margin: 20px 0;
             padding: 15px;
-            border-top: 1px solid rgba(212, 175, 55, 0.3);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            border-top: 1px solid #d4af37;
+            border-bottom: 1px solid #d4af37;
             font-style: italic;
-            color: #2d3748;
         }
 
         .map-wrapper {
-            background: white; /* Crea un distacco netto dallo sfondo */
-            padding: 10px;
+            background: #ffffff;
+            padding: 12px;
             border-radius: 20px;
-            border: 1px solid #d4af37;
+            border: 1px solid #eee;
             margin: 20px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .map-label {
-            font-weight: bold;
-            color: #4a6e8a;
-            display: block;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            font-size: 12px;
-            letter-spacing: 2px;
+            /* Questo "stacca" la mappa dallo sfondo floreale */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
         }
 
         iframe {
             width: 100%;
-            height: 220px;
+            height: 200px;
             border-radius: 12px;
             border: none;
-            display: block;
         }
 
         .rsvp-btn {
             display: inline-block;
             background-color: #4a6e8a;
             color: white !important;
-            padding: 18px 35px;
+            padding: 16px 30px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 18px;
-            margin: 25px 0;
-            transition: transform 0.3s ease;
+            font-size: 17px;
+            margin: 20px 0;
         }
 
-        .contacts { font-size: 14px; line-height: 1.6; color: #2d3748; }
+        .contacts { font-size: 14px; line-height: 1.6; }
         .contacts a { color: #4a6e8a; text-decoration: none; font-weight: bold; }
 
         @media (max-width: 600px) {
             body { background-attachment: scroll; }
-            .container { padding: 35px 15px; width: 92%; }
+            .container { padding: 30px 15px; }
         }
     </style>
 </head>
@@ -119,21 +113,20 @@
     </div>
 
     <div class="map-wrapper">
-        <span class="map-label">Cerimonia • ore 11:30</span>
-        <p style="font-size: 15px; margin-bottom: 10px;">Comune di Cesena - Sala degli Specchi<br>Piazza del Popolo 10, Cesena</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2864.7358485292853!2d12.240751376646872!3d44.14041132002341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca4f64700d14b%3A0xc3f98295b9d2179a!2sPiazza%20del%20Popolo%2C%2010%2C%2047521%20Cesena%20FC!5e0!3m2!1sit!2sit!4v1715690000000!5m2!1sit!2sit" allowfullscreen="" loading="lazy"></iframe>
+        <p style="font-weight: bold; color: #4a6e8a; margin-top: 0;">Cerimonia • ore 11:30</p>
+        <p style="font-size: 14px;">Comune di Cesena - Sala degli Specchi<br>Piazza del Popolo 10, Cesena</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2862.880486001099!2d12.240763376724646!3d44.13735602058316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca4f438a2e46d%3A0xc6e4668f45a7be32!2sPiazza%20del%20Popolo%2C%2010%2C%2047521%20Cesena%20FC!5e0!3m2!1sit!2sit!4v1715698000000!5m2!1sit!2sit" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <div class="map-wrapper">
-        <span class="map-label">Ricevimento</span>
-        <p style="font-size: 15px; margin-bottom: 10px;">Ristorante Castello di Montenovo<br>Via Castello Montenovo 74, Montiano</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2866.565863261771!2d12.298138376644837!3d44.133649922485344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca40f15bb478d%3A0x70812402d0ba614a!2sRistorante%20Castello!5e0!3m2!1sit!2sit!4v1715691111111!5m2!1sit!2sit" allowfullscreen="" loading="lazy"></iframe>
+        <p style="font-weight: bold; color: #4a6e8a; margin-top: 0;">Ricevimento</p>
+        <p style="font-size: 14px;">Ristorante Castello di Montenovo<br>Via Castello Montenovo 74, Montiano</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2863.38550186591!2d12.299443276724128!3d44.12781442126296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca40f15bb478d%3A0xf0812402d0ba614a!2sRistorante%20Castello!5e0!3m2!1sit!2sit!4v1715698100000!5m2!1sit!2sit" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <div class="rsvp-section">
-        <p>Gentile conferma entro il 30 Aprile 2026</p>
-        <a href="https://forms.gle/9Dk4VpfLEvGKeMeHA" class="rsvp-btn" target="_blank">CONFERMA LA TUA PRESENZA</a>
-        
+        <p>È gradita conferma entro il 30 Aprile 2026</p>
+        <a href="https://forms.gle/SJHkhyK3dDxH6h7H7" class="rsvp-btn" target="_blank">CONFERMA QUI</a>
         <div class="contacts">
             <p>Luca: <a href="https://wa.me/393407375613">340 737 5613</a><br>
             Roberta: <a href="https://wa.me/393282893816">328 289 3816</a></p>
@@ -142,4 +135,3 @@
 </div>
 
 </body>
-</html>

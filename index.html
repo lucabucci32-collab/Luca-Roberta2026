@@ -5,90 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roberta & Luca - 14 Giugno 2026</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;1,400;0,700&display=swap');
 
         body {
             margin: 0;
             padding: 0;
             font-family: 'Playfair Display', serif;
-            /* Nuova strategia: sfondo che si ripete e copre tutto */
-            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png'), 
-                              url('https://png.pngtree.com/background/20250306/original/pngtree-watercolor-floral-frame-with-gold-accents-for-wedding-invitation-background-picture-image_16294205.jpg');
+            /* Nuovo sfondo: pattern floreale pieno e delicato */
+            background: url('https://www.transparenttextures.com/patterns/natural-paper.png'),
+                        url('https://img.freepik.com/free-vector/hand-painted-watercolor-floral-background_23-2148438102.jpg?t=st=1715694300~exp=1715697900~hmac=6b9e2626e2e28a4c8a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a&w=1380');
             background-size: auto, cover;
             background-position: center;
             background-attachment: fixed;
+            color: #2d3748;
             text-align: center;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 20px 0;
         }
 
         .container {
-            /* Rendiamo il contenitore molto più trasparente (0.7) */
-            background: rgba(255, 255, 255, 0.75); 
-            /* L'effetto sfocatura aiuta a leggere il testo sopra i fiori */
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            
-            padding: 40px 25px;
-            border-radius: 20px;
+            /* Sfondo semitrasparente per far trasparire i fiori */
+            background: rgba(255, 255, 255, 0.82); 
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            padding: 50px 30px;
+            border-radius: 25px;
             max-width: 85%;
-            width: 500px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border: 1.5px solid #d4af37;
-            margin: 20px auto;
+            width: 520px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 2px solid #d4af37;
+            margin: auto;
         }
 
-        h1 { font-size: 50px; color: #5d8aa8; font-family: 'Great Vibes', cursive; margin: 0; }
-        h2 { font-size: 20px; color: #b0c4de; margin-bottom: 20px; font-weight: normal; letter-spacing: 2px; }
+        h1 { 
+            font-size: clamp(45px, 10vw, 68px); 
+            color: #4a6e8a; 
+            font-family: 'Great Vibes', cursive; 
+            margin: 0; 
+        }
+
+        /* Data intensificata per massima leggibilità */
+        h2 { 
+            font-size: 26px; 
+            color: #3d5a80; /* Blu più scuro e intenso */
+            margin-top: 5px; 
+            margin-bottom: 25px; 
+            font-weight: 700; 
+            letter-spacing: 1px;
+        }
         
         .quote {
-            font-size: 18px;
-            color: #4a5568;
-            margin: 20px 0;
+            font-size: 19px;
+            color: #2d3748;
+            margin: 25px 0;
             padding: 15px;
-            border-top: 1px solid rgba(212, 175, 55, 0.5);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.5);
+            border-top: 1.5px solid #d4af37;
+            border-bottom: 1.5px solid #d4af37;
+            font-style: italic;
         }
 
         .details {
-            font-size: 16px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 15px;
+            font-size: 17px;
+            background: rgba(255, 255, 255, 0.4);
+            padding: 20px;
             border-radius: 15px;
             margin-bottom: 20px;
         }
 
+        .map-label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #4a6e8a;
+        }
+
         iframe {
             width: 100%;
-            height: 200px;
-            border-radius: 10px;
+            height: 230px;
+            border-radius: 12px;
             border: 1px solid #d4af37;
             margin-top: 10px;
         }
 
         .rsvp-btn {
             display: inline-block;
-            background-color: #5d8aa8;
+            background-color: #4a6e8a;
             color: white !important;
-            padding: 15px 25px;
+            padding: 18px 32px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            margin: 15px 0;
+            font-size: 18px;
+            margin: 25px 0;
+            box-shadow: 0 5px 15px rgba(74, 110, 138, 0.3);
         }
 
-        .contacts { font-size: 14px; color: #4a5568; }
-        .contacts a { color: #5d8aa8; text-decoration: none; font-weight: bold; }
+        .contacts { font-size: 15px; line-height: 1.6; }
+        .contacts a { color: #4a6e8a; text-decoration: none; font-weight: bold; }
 
         @media (max-width: 600px) {
-            body { 
-                background-attachment: scroll;
-                background-size: auto 100%; /* Forza la visibilità dell'altezza dell'immagine */
-            }
-            .container { padding: 30px 15px; }
-            h1 { font-size: 42px; }
+            body { background-attachment: scroll; padding: 15px 0; }
+            .container { padding: 40px 15px; width: 90%; }
+            h1 { font-size: 48px; }
+            h2 { font-size: 24px; }
         }
     </style>
 </head>
@@ -103,25 +125,34 @@
     </div>
 
     <div class="details">
-        <p><strong>Cerimonia • ore 11:30</strong><br>
-        Comune di Cesena - Sala degli Specchi</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2863.38555890887!2d12.298131376646808!3d44.10651832300486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca61994e63f97%3A0x7d6b8b0e77d6f51c!2sVia%20Castello%20Montenovo%2C%2074%2C%2047020%20Montiano%20FC!5e0!3m2!1sit!2sit!4v17000000000013" allowfullscreen="" loading="lazy"></iframe>
+        <span class="map-label">Cerimonia • ore 11:30</span>
+        <p>Comune di Cesena - Sala degli Specchi<br>Piazza del Popolo 10, Cesena</p>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2861.325624796384!2d12.240751176662446!3d44.13840202082294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca50020464f1d%3A0xe546944b207a9741!2sComune%20di%20Cesena!5e0!3m2!1sit!2sit!4v1715695000000!5m2!1sit!2sit" 
+            allowfullscreen="" loading="lazy"></iframe>
 
-        <hr style="border:0; height:1px; background:#d4af37; opacity:0.2; margin:20px 0;">
+        <hr style="border:0; height:1px; background:#d4af37; opacity:0.3; margin:30px 0;">
 
-        <p><strong>Ricevimento</strong><br>
-        Ristorante Castello di Montenovo</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2863.38555890887!2d12.298131376646808!3d44.10651832300486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca61994e63f97%3A0x7d6b8b0e77d6f51c!2sVia%20Castello%20Montenovo%2C%2074%2C%2047020%20Montiano%20FC!5e0!3m2!1sit!2sit!4v17000000000014" allowfullscreen="" loading="lazy"></iframe>
+        <span class="map-label">Ricevimento</span>
+        <p>Ristorante Castello di Montenovo<br>Via Castello Montenovo 74, Montiano</p>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2862.158548902506!2d12.299061076661448!3d44.121344221940955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca40f15bb478d%3A0xf0812402d0ba614a!2sRistorante%20Castello!5e0!3m2!1sit!2sit!4v1715695100000!5m2!1sit!2sit" 
+            allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <div class="rsvp-section">
-        <p>Gentile conferma entro il 30 Aprile</p>
-        <a href="https://forms.gle/ZqubB3qhQULJkoHT7" class="rsvp-btn" target="_blank">CONFERMA QUI</a>
+        <p>Gentile conferma entro il <strong>30 Aprile 2026</strong></p>
+        <a href="https://forms.gle/7Ahes7Gc4MujSuNz7" class="rsvp-btn" target="_blank">CONFERMA LA TUA PRESENZA</a>
+        
         <div class="contacts">
             <p>Luca: <a href="https://wa.me/393407375613">340 737 5613</a><br>
             Roberta: <a href="https://wa.me/393282893816">328 289 3816</a></p>
         </div>
     </div>
+
+    <p style="margin-top: 40px; font-style: italic; color: #4a6e8a;">
+        Non vediamo l'ora di vedervi! 💙
+    </p>
 </div>
 
 </body>
